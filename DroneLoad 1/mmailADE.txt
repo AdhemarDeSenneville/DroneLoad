@@ -1,0 +1,67 @@
+
+
+Adhémar de Senneville 
+5711950
+A22
+
+E49E125330E2
+
+x=(10^9-1)/11, 7x/3+x/9
+
+Le Blanc - Indre
+N. :
+Année :
+Fabrication :
+
+ <node pkg="tutorial2" type="subscriber_node.cpp" name="Subscriber" output="screen"/>
+
+cd tutorials
+catkin_make
+source devel/setup.bash
+rosrun tutorial2
+
+cd simulation_ws/
+catkin_make
+source devel/setup.bash
+roslaunch my_simulations my_world.launch --screen
+
+git init
+git remote add Usines1 https://github.com/mlherd/Dataset-of-Gazebo-Worlds-Models-and-Maps.git
+git fetch Usines1
+git checkout Usines1/master -- worlds/factory/
+
+
+
+
+<collision name='back_caster_collision'>
+      <origin xyz="-0.15 0 -0.05" rpy=" 0 0 0"/>
+      <geometry>
+        <sphere radius="0.0499"/>
+      </geometry>
+    </collision>
+
+    <visual name='back_caster_visual'>
+      <origin xyz="-0.15 0 -0.05" rpy=" 0 0 0"/>
+      <geometry>
+        <sphere radius="0.05"/>
+      </geometry>
+    </visual>
+
+    <collision name='front_caster_collision'>
+      <origin xyz="0.15 0 -0.05" rpy=" 0 0 0"/>
+      <geometry>
+        <sphere radius="0.0499"/>
+      </geometry>
+    </collision>
+
+    <visual name='front_caster_visual'>
+      <origin xyz="0.15 0 -0.05" rpy=" 0 0 0"/>
+      <geometry>
+        <sphere radius="0.05"/>
+      </geometry>
+    </visual>
+[gazebo_gui-5] process has died [pid 3814, exit code 134, cmd /opt/ros/melodic/lib/gazebo_ros/gzclient __name:=gazebo_gui __log:=/home/adhemar/.ros/log/c2343e02-fa90-11eb-8923-0800276dcaef/gazebo_gui-5.log].
+log file: /home/adhemar/.ros/log/c2343e02-fa90-11eb-8923-0800276dcaef/gazebo_gui-5*.log
+
+
+Unable to open 'CMakeLists.txt': Unable to read file \\wsl$\Ubuntu-18.04\home\ \src\CMakeLists.txt (Unknown (FileSystemError): Error: ELOOP: too many symbolic links encountered, open 
